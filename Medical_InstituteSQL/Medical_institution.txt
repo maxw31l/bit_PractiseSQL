@@ -1,0 +1,98 @@
+===Database Medical institution
+
+== Table structure for table Pacient
+
+|------
+|Column|Type|Null|Default
+|------
+|//**Id**//|int(255)|No|
+|**Visit_Id**|int(255)|No|
+|**User_id**|int(255)|No|
+|History_book_id|int(255)|No|
+|First_name|varchar(255)|No|
+|Last_name|varchar(255)|No|
+|Email|varchar(255)|No|
+|Last_modified|datetime|No|
+== Dumping data for table Pacient
+
+== Table structure for table Role
+
+|------
+|Column|Type|Null|Default
+|------
+|//**Id**//|int(11)|No|
+|Name|varchar(255)|No|
+|Level|varchar(255)|No|
+|Last_modified|datetime|No|
+== Dumping data for table Role
+
+== Table structure for table Scheedule
+
+|------
+|Column|Type|Null|Default
+|------
+|//**Id**//|int(11)|No|
+|**User_Id**|int(11)|No|
+|Work_date|date|No|
+|Start_work_hour|datetime|No|
+|End_work_hour|datetime|No|
+|Even_day|tinyint(1)|No|
+|Odd_day|tinyint(1)|No|
+|Last_modified|datetime|No|
+== Dumping data for table Scheedule
+
+== Table structure for table Service
+
+|------
+|Column|Type|Null|Default
+|------
+|//**Id**//|int(255)|No|
+|**Visit_Id**|int(255)|No|
+|**Service_type_name**|int(255)|No|
+== Dumping data for table Service
+
+== Table structure for table User
+
+|------
+|Column|Type|Null|Default
+|------
+|//**Id**//|int(255)|No|
+|**Role_Id**|int(255)|No|
+|**Access_level_Id**|int(255)|No|
+|**Scheedule_Id**|int(255)|No|
+|Password|varchar(255)|No|
+|Email|varchar(255)|No|
+|First_Name|varchar(255)|No|
+|Last_Name|varchar(255)|No|
+== Dumping data for table User
+
+== Table structure for table Visit
+
+|------
+|Column|Type|Null|Default
+|------
+|//**Id**//|int(255)|No|
+|**Pacient_Id**|int(255)|No|
+|**Service_Id**|int(255)|No|
+|Date|date|No|
+|Start_time|datetime|No|
+|End_time|datetime|No|
+|Expected_price|float|No|
+|Full_price|float|No|
+|Discount|float|No|
+|Final_price|float|No|
+|Cancelled|tinyint(1)|No|
+|Cancellation_reason|varchar(255)|No|
+|Last_modified|datetime|No|
+== Dumping data for table Visit
+
+== Table structure for table visit_service
+
+|------
+|Column|Type|Null|Default
+|------
+|//**Id**//|int(255)|No|
+|**Visit_Id**|int(255)|No|
+|**Service_id**|int(255)|No|
+== Dumping data for table visit_service
+
